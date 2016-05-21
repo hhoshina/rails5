@@ -1,0 +1,74 @@
+class TwinesController < ApplicationController
+  before_action :set_twine, only: [:show, :edit, :update, :destroy]
+
+  # GET /twines
+  # GET /twines.json
+  def index
+    @twines = Twine.all
+  end
+
+  # GET /twines/1
+  # GET /twines/1.json
+  def show
+  end
+
+  # GET /twines/new
+  def new
+    @twine = Twine.new
+  end
+
+  # GET /twines/1/edit
+  def edit
+  end
+
+  # POST /twines
+  # POST /twines.json
+  def create
+    @twine = Twine.new(twine_params)
+
+    respond_to do |format|
+      if @twine.save
+        format.html { redirect_to @twine, notice: 'Twine was successfully created.' }
+        format.json { render :show, status: :created, location: @twine }
+      else
+        format.html { render :new }
+        format.json { render json: @twine.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # PATCH/PUT /twines/1
+  # PATCH/PUT /twines/1.json
+  def update
+    respond_to do |format|
+      if @twine.update(twine_params)
+        format.html { redirect_to @twine, notice: 'Twine was successfully updated.' }
+        format.json { render :show, status: :ok, location: @twine }
+      else
+        format.html { render :edit }
+        format.json { render json: @twine.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # DELETE /twines/1
+  # DELETE /twines/1.json
+  def destroy
+    @twine.destroy
+    respond_to do |format|
+      format.html { redirect_to twines_url, notice: 'Twine was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
+
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_twine
+      @twine = Twine.find(params[:id])
+    end
+
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def twine_params
+      params.require(:twine).permit(:locate, :temp)
+    end
+end

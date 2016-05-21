@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Twines</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Locate</th>
+      <th>Temp</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @twines.each do |twine| %>
+      <tr>
+        <td><%= twine.locate %></td>
+        <td><%= twine.temp %></td>
+        <td><%= link_to 'Show', twine %></td>
+        <td><%= link_to 'Edit', edit_twine_path(twine) %></td>
+        <td><%= link_to 'Destroy', twine, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Twine', new_twine_path %>

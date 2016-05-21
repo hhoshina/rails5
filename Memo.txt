@@ -1,0 +1,31 @@
+2016.5.13
+
+bundle exec rake secret
+0c4ca8aeefcec9049d4790145b9416ec7c38edb6cd510c111e42ff61f06f88f2160cce68adc6f9098258c958389ae9d1b6d85f04b24cff54d1bea366d502054e
+
+全部の器の設定が終わってから、DBを入れていく
+
+
+(1)グラフ表示させるために
+/app/views/layouts/application.html.erb に
+　<%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+を追加する。
+
+config/environments/production.rb
+config.assets.compile = true にする
+
+(2) twitter-bootstrap を導入
+
+Gemfile
+gem 'twitter-bootstrap3-rails'
+
+rails g bootstrap:install static
+rails g bootstrap:layout application fluid
+
+(3) google map でTorアドレス表示
+https://github.com/apneadiving/Google-Maps-for-Rails
+
+(4) 日本語化対応
+ config/application.rb
+ config.time_zone = 'Tokyo'
+ config.active_record.default_timezone = :local

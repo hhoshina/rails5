@@ -1,0 +1,27 @@
+<%= form_for(twine) do |f| %>
+  <% if twine.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(twine.errors.count, "error") %> prohibited this twine from being saved:</h2>
+
+      <ul>
+      <% twine.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :locate %>
+    <%= f.text_field :locate %>
+  </div>
+
+  <div class="field">
+    <%= f.label :temp %>
+    <%= f.text_field :temp %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

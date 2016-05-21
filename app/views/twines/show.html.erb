@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Locate:</strong>
+  <%= @twine.locate %>
+</p>
+
+<p>
+  <strong>Temp:</strong>
+  <%= @twine.temp %>
+</p>
+
+<%= link_to 'Edit', edit_twine_path(@twine) %> |
+<%= link_to 'Back', twines_path %>

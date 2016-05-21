@@ -1,0 +1,74 @@
+class GeoipsController < ApplicationController
+  before_action :set_geoip, only: [:show, :edit, :update, :destroy]
+
+  # GET /geoips
+  # GET /geoips.json
+  def index
+    @geoips = Geoip.all
+  end
+
+  # GET /geoips/1
+  # GET /geoips/1.json
+  def show
+  end
+
+  # GET /geoips/new
+  def new
+    @geoip = Geoip.new
+  end
+
+  # GET /geoips/1/edit
+  def edit
+  end
+
+  # POST /geoips
+  # POST /geoips.json
+  def create
+    @geoip = Geoip.new(geoip_params)
+
+    respond_to do |format|
+      if @geoip.save
+        format.html { redirect_to @geoip, notice: 'Geoip was successfully created.' }
+        format.json { render :show, status: :created, location: @geoip }
+      else
+        format.html { render :new }
+        format.json { render json: @geoip.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # PATCH/PUT /geoips/1
+  # PATCH/PUT /geoips/1.json
+  def update
+    respond_to do |format|
+      if @geoip.update(geoip_params)
+        format.html { redirect_to @geoip, notice: 'Geoip was successfully updated.' }
+        format.json { render :show, status: :ok, location: @geoip }
+      else
+        format.html { render :edit }
+        format.json { render json: @geoip.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # DELETE /geoips/1
+  # DELETE /geoips/1.json
+  def destroy
+    @geoip.destroy
+    respond_to do |format|
+      format.html { redirect_to geoips_url, notice: 'Geoip was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
+
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_geoip
+      @geoip = Geoip.find(params[:id])
+    end
+
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def geoip_params
+      params.require(:geoip).permit(:ipaddress, :latitude, :longitude)
+    end
+end

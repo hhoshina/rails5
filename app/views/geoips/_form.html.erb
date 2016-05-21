@@ -1,0 +1,32 @@
+<%= form_for(geoip) do |f| %>
+  <% if geoip.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(geoip.errors.count, "error") %> prohibited this geoip from being saved:</h2>
+
+      <ul>
+      <% geoip.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ipaddress %>
+    <%= f.text_field :ipaddress %>
+  </div>
+
+  <div class="field">
+    <%= f.label :latitude %>
+    <%= f.text_field :latitude %>
+  </div>
+
+  <div class="field">
+    <%= f.label :longitude %>
+    <%= f.text_field :longitude %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

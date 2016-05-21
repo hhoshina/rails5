@@ -1,0 +1,2 @@
+class Geoip < ApplicationRecord
+end
