@@ -1,7 +1,6 @@
 2016.5.13
 
 bundle exec rake secret
-0c4ca8aeefcec9049d4790145b9416ec7c38edb6cd510c111e42ff61f06f88f2160cce68adc6f9098258c958389ae9d1b6d85f04b24cff54d1bea366d502054e
 
 全部の器の設定が終わってから、DBを入れていく
 
