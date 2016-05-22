@@ -39,7 +39,7 @@ class TwinesController < ApplicationController
     end
  	def basic_auth
 		authenticate_or_request_with_http_basic do |user,pass| 
-			user = "twine" && pass == "KoKoKo333"
+			user = "twine" && pass == ENV['TWINE_PASSWORD'] 
 		end
 	end
 end
