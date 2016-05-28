@@ -6,12 +6,14 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
+ 	Ruby 2.2.3 +
 
 * System dependencies
 
 * Configuration
 
 * Database creation
+	MariaDB
 
 * Database initialization
 
