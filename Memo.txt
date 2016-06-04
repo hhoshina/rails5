@@ -31,3 +31,10 @@ https://github.com/apneadiving/Google-Maps-for-Rails
 
 (5)mysql2 を使うためには、Mysql5.6のインストールが必要。方法は以下。
 http://makandracards.com/makandra/39899-install-mysql-5-6-in-ubuntu-16-04
+
+(6) DBをコピーする
+
+db:migrate RAILS_ENV=production の後に、 
+STEP3：コピー先に情報を挿入する。
+INSERT into db2name.tbl2name SELECT * from db1name.tbl1name;
+

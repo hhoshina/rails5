@@ -1,0 +1,2 @@
+class AccessLogTool < ApplicationRecord
+end

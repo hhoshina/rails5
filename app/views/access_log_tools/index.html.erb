@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Access Log Tools</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Time s</th>
+      <th>Time e</th>
+      <th>Status</th>
+      <th>Status comment</th>
+      <th>Status comment2</th>
+      <th>Status comment3</th>
+      <th>Remote addr</th>
+      <th>Useragent</th>
+      <th>Program name</th>
+      <th>Input1</th>
+      <th>Input2</th>
+      <th>Input3</th>
+      <th>Input4</th>
+      <th>Input5</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @access_log_tools.each do |access_log_tool| %>
+      <tr>
+        <td><%= access_log_tool.time_s %></td>
+        <td><%= access_log_tool.time_e %></td>
+        <td><%= access_log_tool.status %></td>
+        <td><%= access_log_tool.status_comment %></td>
+        <td><%= access_log_tool.status_comment2 %></td>
+        <td><%= access_log_tool.status_comment3 %></td>
+        <td><%= access_log_tool.remote_addr %></td>
+        <td><%= access_log_tool.useragent %></td>
+        <td><%= access_log_tool.program_name %></td>
+        <td><%= access_log_tool.input1 %></td>
+        <td><%= access_log_tool.input2 %></td>
+        <td><%= access_log_tool.input3 %></td>
+        <td><%= access_log_tool.input4 %></td>
+        <td><%= access_log_tool.input5 %></td>
+        <td><%= link_to 'Show', access_log_tool %></td>
+        <td><%= link_to 'Edit', edit_access_log_tool_path(access_log_tool) %></td>
+        <td><%= link_to 'Destroy', access_log_tool, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Access Log Tool', new_access_log_tool_path %>

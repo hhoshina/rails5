@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/activeadmin/activeadmin.git
-  revision: b8123d60187f2895582814d8a6baae71ddcc1fe1
+  revision: 1b5c9259c4cfe183039498e0e1eb2c6c146d2273
   specs:
     activeadmin (1.0.0.pre2)
       arbre (~> 1.0, >= 1.0.2)
@@ -19,10 +19,10 @@ GIT
 
 GIT
   remote: git://github.com/amatsuda/kaminari.git
-  revision: 39f5ce887040ad0940032473c3f09828ae849f2b
+  revision: 8a14d33aa15161d7e1bee41970ced10f57e7f1e4
   branch: 0-17-stable
   specs:
-    kaminari (0.17.0.alpha)
+    kaminari (0.17.0)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
 
@@ -86,7 +86,7 @@ GEM
       thor (~> 0.19)
     builder (3.2.2)
     byebug (9.0.5)
-    chartkick (1.5.2)
+    chartkick (2.0.0)
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.1.x)
@@ -102,7 +102,7 @@ GEM
     formtastic (3.1.4)
       actionpack (>= 3.2.13)
     formtastic_i18n (0.6.0)
-    geocoder (1.3.5)
+    geocoder (1.3.6)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     gmaps4rails (2.1.2)
@@ -115,7 +115,7 @@ GEM
       has_scope (~> 0.6.0.rc)
       railties (>= 3.2, < 5)
       responders
-    jbuilder (2.4.1)
+    jbuilder (2.5.0)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
     jquery-rails (4.1.1)
@@ -214,7 +214,7 @@ GEM
       ref
     thor (0.19.1)
     thread_safe (0.3.5)
-    tilt (2.0.4)
+    tilt (2.0.5)
     turbolinks (5.0.0.beta2)
       turbolinks-source
     turbolinks-source (5.0.0.beta5)

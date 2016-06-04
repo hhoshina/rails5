@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time_s: 2016-06-01 20:46:00
+  time_e: 2016-06-01 20:46:00
+  status: 1
+  status_comment: MyString
+  status_comment2: MyString
+  status_comment3: MyString
+  remote_addr: MyString
+  useragent: MyString
+  program_name: MyString
+  input1: MyString
+  input2: MyString
+  input3: MyString
+  input4: MyString
+  input5: MyString
+
+two:
+  time_s: 2016-06-01 20:46:00
+  time_e: 2016-06-01 20:46:00
+  status: 1
+  status_comment: MyString
+  status_comment2: MyString
+  status_comment3: MyString
+  remote_addr: MyString
+  useragent: MyString
+  program_name: MyString
+  input1: MyString
+  input2: MyString
+  input3: MyString
+  input4: MyString
+  input5: MyString

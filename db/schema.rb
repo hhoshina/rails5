@@ -11,7 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160520145808) do
+ActiveRecord::Schema.define(version: 20160601114600) do
+
+  create_table "access_log_tools", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.datetime "time_s"
+    t.datetime "time_e"
+    t.integer  "status"
+    t.string   "status_comment"
+    t.string   "status_comment2"
+    t.string   "status_comment3"
+    t.string   "remote_addr"
+    t.string   "useragent"
+    t.string   "program_name"
+    t.string   "input1"
+    t.string   "input2"
+    t.string   "input3"
+    t.string   "input4"
+    t.string   "input5"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
 
   create_table "active_admin_comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string   "namespace"
