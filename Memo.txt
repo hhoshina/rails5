@@ -1,4 +1,4 @@
-2016.5.30
+2016.6.11
 
 bundle exec rake secret
 
@@ -38,3 +38,5 @@ db:migrate RAILS_ENV=production の後に、
 STEP3：コピー先に情報を挿入する。
 INSERT into db2name.tbl2name SELECT * from db1name.tbl1name;
 
+(7)nokogiri bunle update 失敗対処
+  $ bundle config build.nokogiri --use-system-libraries
