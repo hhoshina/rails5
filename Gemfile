@@ -14,7 +14,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -55,7 +55,8 @@ gem 'gmaps4rails'
 gem 'geocoder'
 
 ## active admin by H.HOSHINA
-#gem 'activeadmin', github: 'activeadmin/activeadmin'
+gem 'activeadmin', github: 'activeadmin/activeadmin'
 gem 'devise', github: 'plataformatec/devise'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem 'kaminari',   github: 'amatsuda/kaminari', branch: '0-17-stable'
 
