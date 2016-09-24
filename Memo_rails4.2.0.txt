@@ -1,0 +1,25 @@
+2015.10.10
+
+*** rubygems-update Install
+$ sudo gem install rubygems-update
+
+
+*** 日々やること
+$ sudo update_rubygems
+$ sudo gem update
+$ bundle update
+
+1. データをコピー
+mysql> insert into rails4_2_0_development.twines select * from aplication_production.twines;
+
+2. 編集した点
+  assets/stylesheets/application.css
+  views/layouts/application.html.erb
+
+** libを読み込むために、autoloadのパスを追加
+$ vim config/application.rb 
+----追加-----
+# to auto load lib/ directory
+config.autoload_paths += %W(#{config.root}/lib)
+-------------
+

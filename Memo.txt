@@ -1,5 +1,9 @@
 2016.6.11
 
+https://blog.guildworks.jp/2015/12/21/google-cloud-vision/
+
+------
+
 bundle exec rake secret
 
 全部の器の設定が終わってから、DBを入れていく

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :photos	do
+	post :upload, on: :collection
+  end
   resources :access_log_tools
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

@@ -4,7 +4,8 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0'
 # Use mysql as the database for Active Record
-gem 'mysql2', '>= 0.3.18', '< 0.5'
+#gem 'mysql2', '>= 0.3.18', '< 0.5'
+gem 'mysql2'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -53,10 +54,16 @@ gem 'chartkick'
 gem 'twitter-bootstrap3-rails'
 gem 'gmaps4rails'
 gem 'geocoder'
-
+gem 'did_you_mean'
 ## active admin by H.HOSHINA
 gem 'activeadmin', github: 'activeadmin/activeadmin'
 gem 'devise', github: 'plataformatec/devise'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem 'kaminari',   github: 'amatsuda/kaminari', branch: '0-17-stable'
 
+#Google Cloud Vision 
+gem 'action_args'
+gem 'carrierwave'
+gem 'pry-rails'
+gem 'httpclient'
+gem 'dotenv-rails', groups: [:development, :test]  
