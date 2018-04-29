@@ -1,0 +1,1 @@
+json.partial! "apachelogs/apachelog", apachelog: @apachelog

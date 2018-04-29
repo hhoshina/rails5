@@ -1,6 +1,6 @@
 class CreateAccessLogTools < ActiveRecord::Migration[5.0]
   def change
-    create_table :access_log_tools do |t|
+    create_table :access_log_tools, :options => 'ENGINE=InnoDB DEFAULT CHARSET=utf8' do |t|
       t.datetime :time_s
       t.datetime :time_e
       t.integer :status

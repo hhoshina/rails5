@@ -2,18 +2,20 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.0'
+gem 'rails', '~> 5.1.6'
 # Use mysql as the database for Active Record
-#gem 'mysql2', '>= 0.3.18', '< 0.5'
-gem 'mysql2'
+gem 'mysql2', '>= 0.3.18', '< 0.5'
+#gem 'mysql2'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+#gem 'sass-rails', '~> 5.0'
+gem 'sass-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.2'
+#gem 'coffee-rails', '~> 4.2'
+gem 'coffee-rails'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 gem 'therubyracer', platforms: :ruby
 
@@ -46,7 +48,7 @@ group :development do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+#gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
 # add on by H.HOSHINA
@@ -54,12 +56,18 @@ gem 'chartkick'
 gem 'twitter-bootstrap3-rails'
 gem 'gmaps4rails'
 gem 'geocoder'
-gem 'did_you_mean'
+#gem 'did_you_mean','~>1.1.2' 
 ## active admin by H.HOSHINA
-gem 'activeadmin', github: 'activeadmin/activeadmin'
-gem 'devise', github: 'plataformatec/devise'
-gem 'inherited_resources', github: 'activeadmin/inherited_resources'
-gem 'kaminari',   github: 'amatsuda/kaminari', branch: '0-17-stable'
+gem 'activeadmin', github:'activeadmin'
+#gem 'devise', github: 'plataformatec/devise', '~> 4.2.0'
+#gem 'devise', git: 'https://github.com/gogovan/devise.git', branch: 'rails-5.1'
+gem 'devise'
+gem 'erubis'
+
+#gem 'inherited_resources', github:'activeadmin/inherited_resources'
+gem 'inherited_resources'
+#gem 'kaminari',github:'amatsuda/kaminari', branch: '0-17-stable'
+gem 'kaminari'
 
 #Google Cloud Vision 
 gem 'action_args'

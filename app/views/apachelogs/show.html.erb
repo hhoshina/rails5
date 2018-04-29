@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ipadress:</strong>
+  <%= @apachelog.ipadress %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @apachelog.time %>
+</p>
+
+<p>
+  <strong>Method:</strong>
+  <%= @apachelog.method %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @apachelog.status %>
+</p>
+
+<p>
+  <strong>Bite:</strong>
+  <%= @apachelog.bite %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @apachelog.url %>
+</p>
+
+<p>
+  <strong>Useragent:</strong>
+  <%= @apachelog.useragent %>
+</p>
+
+<%= link_to 'Edit', edit_apachelog_path(@apachelog) %> |
+<%= link_to 'Back', apachelogs_path %>

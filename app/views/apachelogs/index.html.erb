@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Apachelogs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ipadress</th>
+      <th>Time</th>
+      <th>Method</th>
+      <th>Status</th>
+      <th>Bite</th>
+      <th>Url</th>
+      <th>Useragent</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @apachelogs.each do |apachelog| %>
+      <tr>
+        <td><%= apachelog.ipadress %></td>
+        <td><%= apachelog.time %></td>
+        <td><%= apachelog.method %></td>
+        <td><%= apachelog.status %></td>
+        <td><%= apachelog.bite %></td>
+        <td><%= apachelog.url %></td>
+        <td><%= apachelog.useragent %></td>
+        <td><%= link_to 'Show', apachelog %></td>
+        <td><%= link_to 'Edit', edit_apachelog_path(apachelog) %></td>
+        <td><%= link_to 'Destroy', apachelog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Apachelog', new_apachelog_path %>

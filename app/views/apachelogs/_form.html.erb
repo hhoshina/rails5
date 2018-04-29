@@ -1,0 +1,52 @@
+<%= form_for(apachelog) do |f| %>
+  <% if apachelog.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(apachelog.errors.count, "error") %> prohibited this apachelog from being saved:</h2>
+
+      <ul>
+      <% apachelog.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ipadress %>
+    <%= f.text_field :ipadress %>
+  </div>
+
+  <div class="field">
+    <%= f.label :time %>
+    <%= f.datetime_select :time %>
+  </div>
+
+  <div class="field">
+    <%= f.label :method %>
+    <%= f.text_area :method %>
+  </div>
+
+  <div class="field">
+    <%= f.label :status %>
+    <%= f.number_field :status %>
+  </div>
+
+  <div class="field">
+    <%= f.label :bite %>
+    <%= f.text_field :bite %>
+  </div>
+
+  <div class="field">
+    <%= f.label :url %>
+    <%= f.text_area :url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :useragent %>
+    <%= f.text_area :useragent %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

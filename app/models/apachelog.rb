@@ -1,0 +1,2 @@
+class Apachelog < ApplicationRecord
+end

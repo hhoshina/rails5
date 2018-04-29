@@ -1,0 +1,1 @@
+json.array! @apachelogs, partial: 'apachelogs/apachelog', as: :apachelog
